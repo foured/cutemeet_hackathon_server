@@ -13,5 +13,5 @@ public class Activity {
     private String senderContact;
     private String date;
     private String location;
-    private List<String> tegs;
+    private List<String> tags;
 }

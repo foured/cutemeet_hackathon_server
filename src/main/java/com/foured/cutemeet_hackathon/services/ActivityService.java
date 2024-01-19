@@ -21,7 +21,7 @@ public class ActivityService {
                 .senderName("Ivan")
                 .date("Today")
                 .location("School")
-                .tegs(Arrays.asList("sport", "chess", "together"))
+                .tags(Arrays.asList("sport", "chess", "together"))
                 .senderContact("vk")
                 .build();
 
@@ -32,11 +32,11 @@ public class ActivityService {
         return activities;
     }
 
-    public List<Activity> getActivitiesByTegs(List<String> tegs){
+    public List<Activity> getActivitiesByTags(List<String> tags){
         List<Activity> res = new ArrayList<Activity>();
 
         res.addAll(activities.stream()
-                .filter(app -> app.getTegs().containsAll(tegs))
+                .filter(app -> app.getTags().containsAll(tags))
                 .toList());
 
         return res;

@@ -22,9 +22,9 @@ public class ActivityController {
         return service.getActivities();
     }
 
-    @RequestMapping("/{tegs}")
-    public List<Activity> activityByTegs(@PathVariable String[] tegs){
-        return service.getActivitiesByTegs(Arrays.stream(tegs).toList());
+    @RequestMapping("/{tags}")
+    public List<Activity> activityByTegs(@PathVariable String[] tags){
+        return service.getActivitiesByTags(Arrays.stream(tags).toList());
     }
 
     @RequestMapping("/new")
